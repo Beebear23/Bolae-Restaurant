@@ -1,0 +1,48 @@
+Bolae Restaurant
+Total: 165.0
+Cash Paid: 200
+Change: 35.0
+Time: Time: 22:05:36
+---------------------------
+Bolae Restaurant
+Total: 165.0
+Cash Paid: 200
+Change: 35.0
+Time: Time: 22:05:36
+---------------------------
+Bolae Restaurant
+Total: 275.0
+Cash Paid: 567
+Change: 292.0
+Time: Time: 22:40:51
+---------------------------
+Bolae Restaurant
+Total: 275.00
+Cash Paid: 455
+Change: 180.00
+Time: Time: 19:59:49
+----------------------------
+Bolae Restaurant
+Total: 275.00
+Cash Paid: 455
+Change: 180.00
+Time: Time: 19:59:49
+----------------------------
+Bolae Restaurant
+Total: 275.00
+Cash Paid: 455
+Change: 180.00
+Time: Time: 19:59:49
+----------------------------
+Bolae Restaurant
+Total: 275.00
+Cash Paid: 455
+Change: 180.00
+Time: Time: 19:59:49
+----------------------------
+Bolae Restaurant
+Total: 275.00
+Cash Paid: 455
+Change: 180.00
+Time: Time: 19:59:49
+----------------------------ss

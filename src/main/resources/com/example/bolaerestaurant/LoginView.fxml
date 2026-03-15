@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.bolaerestaurant.LoginController"
+            stylesheets="@style.css"
+            styleClass="root-pane">
+
+    <!-- TOP BAR (matches main UI header) -->
+    <top>
+
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="top-bar">
+
+            <padding>
+                <Insets top="10" bottom="10" left="20" right="20"/>
+            </padding>
+
+            <StackPane prefWidth="60" prefHeight="60" styleClass="logo-box">
+
+                <ImageView fitHeight="45" fitWidth="45" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png"/>
+                    </image>
+                </ImageView>
+
+            </StackPane>
+
+            <Label text="Bolae Markets POS" styleClass="app-title"/>
+
+        </HBox>
+
+    </top>
+
+
+
+    <!-- LOGIN CARD -->
+    <center>
+
+        <StackPane>
+
+            <VBox alignment="CENTER"
+                  spacing="15"
+                  maxWidth="320"
+                  styleClass="menu-card">
+
+                <padding>
+                    <Insets top="25" bottom="25" left="25" right="25"/>
+                </padding>
+
+                <Label text="Bolae Restaurant Login"
+                       styleClass="card-title"/>
+
+                <TextField fx:id="usernameField"
+                           promptText="Username"/>
+
+                <PasswordField fx:id="passwordField"
+                               promptText="Password"/>
+
+                <Button text="Login"
+                        onAction="#login"
+                        styleClass="btn-blue"
+                        maxWidth="Infinity"/>
+
+                <Label fx:id="messageLabel"
+                       styleClass="login-message"/>
+
+            </VBox>
+
+        </StackPane>
+
+    </center>
+
+</BorderPane>

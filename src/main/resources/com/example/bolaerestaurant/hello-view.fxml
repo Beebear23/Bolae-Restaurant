@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.bolaerestaurant.HelloController"
+            prefWidth="1000"
+            prefHeight="650"
+            stylesheets="@style.css"
+            styleClass="root-pane">
+
+    <!-- TOP BAR WITH LOGO -->
+    <top>
+
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="top-bar">
+
+            <padding>
+                <Insets top="10" bottom="10" left="20" right="20"/>
+            </padding>
+
+            <!-- LOGO PLACEHOLDER -->
+            <StackPane prefWidth="80" prefHeight="80" styleClass="logo-box">
+
+                <ImageView fitWidth="60" fitHeight="60" preserveRatio="true">
+                    <!-- PLACEHOLDER IMAGE -->
+                    <image>
+                        <Image url="@logo.png"/>
+                    </image>
+                </ImageView>
+
+            </StackPane>
+
+            <Label text="Bolae Markets POS" styleClass="app-title"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- CENTER MENU -->
+    <center>
+
+        <GridPane hgap="25" vgap="25">
+
+            <padding>
+                <Insets top="20" left="20" right="20" bottom="20"/>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="25"/>
+            </columnConstraints>
+
+
+            <!-- BREAKFAST -->
+            <VBox spacing="10" styleClass="menu-card">
+
+                <padding>
+                    <Insets top="15" left="15" right="15" bottom="15"/>
+                </padding>
+
+                <Label text="Breakfast" styleClass="card-title"/>
+
+                <CheckBox fx:id="eggsBox" text="Eggs - M40"/>
+                <CheckBox fx:id="toastBox" text="Toast - M30"/>
+                <CheckBox fx:id="pancakesBox" text="Pancakes - M50"/>
+
+            </VBox>
+
+
+            <!-- LUNCH -->
+            <VBox spacing="10" GridPane.columnIndex="1" styleClass="menu-card">
+
+                <padding>
+                    <Insets top="15" left="15" right="15" bottom="15"/>
+                </padding>
+
+                <Label text="Lunch" styleClass="card-title"/>
+
+                <CheckBox fx:id="sandwichBox" text="Sandwich - M60"/>
+                <CheckBox fx:id="saladBox" text="Salad - M55"/>
+                <CheckBox fx:id="pizzaBox" text="Pizza - M80"/>
+
+            </VBox>
+
+
+            <!-- DINNER -->
+            <VBox spacing="10" GridPane.columnIndex="2" styleClass="menu-card">
+
+                <padding>
+                    <Insets top="15" left="15" right="15" bottom="15"/>
+                </padding>
+
+                <Label text="Dinner" styleClass="card-title"/>
+
+                <CheckBox fx:id="steakBox" text="Steak - M120"/>
+                <CheckBox fx:id="chickenBox" text="Chicken - M90"/>
+                <CheckBox fx:id="burgerBox" text="Burger - M70"/>
+
+            </VBox>
+
+
+            <!-- DESSERT -->
+            <VBox spacing="10" GridPane.columnIndex="3" styleClass="menu-card">
+
+                <padding>
+                    <Insets top="15" left="15" right="15" bottom="15"/>
+                </padding>
+
+                <Label text="Dessert" styleClass="card-title"/>
+
+                <RadioButton fx:id="cakeRadio" text="Cake - M50">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="dessertGroup"/>
+                    </toggleGroup>
+                </RadioButton>
+
+                <RadioButton fx:id="icecreamRadio"
+                             text="Ice Cream - M40"
+                             toggleGroup="$dessertGroup"/>
+
+            </VBox>
+
+        </GridPane>
+
+    </center>
+
+
+    <!-- PAYMENT PANEL -->
+    <bottom>
+
+        <HBox spacing="30" alignment="CENTER" styleClass="bottom-panel">
+
+            <padding>
+                <Insets top="20" bottom="20"/>
+            </padding>
+
+            <!-- DRINKS -->
+            <VBox spacing="10">
+
+                <Label text="Drinks" styleClass="section-title"/>
+
+                <MenuButton text="Select Drink">
+
+                    <items>
+                        <MenuItem text="Coke - M20" onAction="#selectCoke"/>
+                        <MenuItem text="Juice - M25" onAction="#selectJuice"/>
+                    </items>
+
+                </MenuButton>
+
+            </VBox>
+
+
+            <!-- PAYMENT -->
+            <VBox spacing="8">
+
+                <Label text="Total"/>
+                <TextField fx:id="totalField" editable="false"/>
+
+                <Label text="Cash Paid"/>
+                <TextField fx:id="cashField"/>
+
+                <Label text="Change"/>
+                <TextField fx:id="changeField" editable="false"/>
+
+            </VBox>
+
+
+            <!-- ACTION BUTTONS -->
+            <VBox spacing="10">
+
+                <Button text="Calculate Change"
+                        onAction="#calculateChange"
+                        styleClass="btn-green"/>
+
+                <Button text="Save Order"
+                        onAction="#saveOrder"
+                        styleClass="btn-blue"/>
+
+                <Button text="Reset Order"
+                        onAction="#resetOrder"/>
+
+                <Button text="Exit"
+                        onAction="#exitSystem"
+                        styleClass="btn-red"/>
+
+            </VBox>
+
+
+            <Label fx:id="timeLabel"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
