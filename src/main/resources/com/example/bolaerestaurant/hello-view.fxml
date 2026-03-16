@@ -22,11 +22,10 @@
                 <Insets top="10" bottom="10" left="20" right="20"/>
             </padding>
 
-            <!-- LOGO PLACEHOLDER -->
             <StackPane prefWidth="80" prefHeight="80" styleClass="logo-box">
 
                 <ImageView fitWidth="60" fitHeight="60" preserveRatio="true">
-                    <!-- PLACEHOLDER IMAGE -->
+            
                     <image>
                         <Image url="@logo.png"/>
                     </image>
@@ -56,7 +55,7 @@
             </columnConstraints>
 
 
-            //BREAKFAST
+            <!-- BREAKFAST -->
             <VBox spacing="10" styleClass="menu-card">
 
                 <padding>
@@ -72,7 +71,7 @@
             </VBox>
 
 
-            //LUNCH
+            <!-- LUNCH -->
             <VBox spacing="10" GridPane.columnIndex="1" styleClass="menu-card">
 
                 <padding>
@@ -88,7 +87,7 @@
             </VBox>
 
 
-            //DINNER
+            <!-- DINNER -->
             <VBox spacing="10" GridPane.columnIndex="2" styleClass="menu-card">
 
                 <padding>
@@ -104,7 +103,7 @@
             </VBox>
 
 
-            //DESSERT
+            <!-- DESSERT -->
             <VBox spacing="10" GridPane.columnIndex="3" styleClass="menu-card">
 
                 <padding>
@@ -137,7 +136,7 @@
                 <Insets top="20" bottom="20"/>
             </padding>
 
-            //DRINKS
+            <!-- DRINKS -->
             <VBox spacing="10">
 
                 <Label text="Drinks" styleClass="section-title"/>
@@ -154,7 +153,7 @@
             </VBox>
 
 
-            //PAYMENT
+            <!-- PAYMENT -->
             <VBox spacing="8">
 
                 <Label text="Total"/>
